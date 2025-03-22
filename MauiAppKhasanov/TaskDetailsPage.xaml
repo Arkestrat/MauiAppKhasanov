@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppKhasanov.TaskDetailsPage"
+             BackgroundColor="#f7f7f7">
+    <ScrollView>
+        <StackLayout Padding="20" Spacing="15">
+            <Label Text="Детали задачи" 
+                   FontSize="24" 
+                   HorizontalOptions="Center" 
+                   TextColor="#333" />
+
+            <Entry x:Name="TitleEntry" 
+                   Placeholder="Название задачи" 
+                   FontSize="18" 
+                   BackgroundColor="#fff" 
+                   TextColor="#333" />
+
+            <Editor x:Name="DescriptionEditor" 
+                    Placeholder="Описание задачи" 
+                    FontSize="18" 
+                    BackgroundColor="#fff" 
+                    TextColor="#333"/>
+
+            <DatePicker x:Name="DueDatePicker" 
+                        BackgroundColor="#fff" 
+                        TextColor="#333"/>
+
+            <Picker x:Name="PriorityPicker" 
+                    BackgroundColor="#fff" 
+                    TextColor="#333">
+                <Picker.Items>
+                    <x:String>Высокий</x:String>
+                    <x:String>Средний</x:String>
+                    <x:String>Низкий</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <Button Text="Сохранить изменения" 
+                    BackgroundColor="#4CAF50" 
+                    TextColor="White" 
+                    Padding="10, 5" 
+                    FontSize="18" 
+                    Clicked="OnSaveClicked"/>
+
+            <Button Text="Удалить задачу" 
+                    BackgroundColor="#f44336" 
+                    TextColor="White" 
+                    Padding="10, 5" 
+                    FontSize="18" 
+                    Clicked="OnDeleteClicked"/>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
